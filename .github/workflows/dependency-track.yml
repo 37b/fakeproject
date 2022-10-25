@@ -2,7 +2,10 @@ name: 'Dependency Track'
 
 on: [pull_request]
 
-
+defaults:
+  run:
+    working-directory: ./
+    
 env:
   SCAN_DEBUG_MODE: DEBUG
 
