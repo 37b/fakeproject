@@ -8,5 +8,5 @@ jobs:
   dependency-track:
     runs-on: ubuntu-latest
     steps:
-      - name: 'Generate CycloneDX SBOM'
+        name: 'Generate CycloneDX SBOM'
         uses: AppThreat/cdxgen-action@v1.0.0
