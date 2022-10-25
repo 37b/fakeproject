@@ -10,7 +10,7 @@ jobs:
   dependency-track:
     runs-on: ubuntu-latest
     steps:
-      run: npm install -g @appthreat/cdxgen
+      - run: npm install -g @appthreat/cdxgen
       - name: Generate CycloneDX SBOM
         uses: AppThreat/cdxgen-action@v1.0.0
         with:
