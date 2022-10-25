@@ -10,12 +10,8 @@ jobs:
   dependency-track:
     runs-on: ubuntu-latest
     steps:
-      - run: npm install -g @appthreat/cdxgen
-      - name: Generate CycloneDX SBOM
-        run: cdxgen . -o bom.xml
-      - name: Viewer
-        run: cat bom.xml
-      - uses: actions/upload-artifact@v1
-        with:
-          name: reports
-          path: reports
+      - run: pip3 install poetry
+      - name: cyclonedx installer
+        run: poetry add cyclonedx-bom
+      - name: generate cyclonedx
+        run: python3 -m cyclonedx_py -p
