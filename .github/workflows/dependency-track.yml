@@ -14,4 +14,4 @@ jobs:
       - name: cyclonedx installer
         run: pip3 install cyclonedx-bom
       - name: generate cyclonedx
-        run: python3 -m cyclonedx_py -p -i ../poetry.lock
+        run: python3 -m cyclonedx_py -p -i /home/runner/work/fakeproject/poetry.lock
