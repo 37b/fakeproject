@@ -1,0 +1,12 @@
+name: 'Dependency Track'
+on: [pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  dependency-track:
+    runs-on: ubuntu-latest
+    steps:
+      - name: cdxgen
+        uses: AppThreat/cdxgen-action@v1.0.0
