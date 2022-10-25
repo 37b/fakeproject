@@ -13,6 +13,7 @@ jobs:
       - run: npm install -g @appthreat/cdxgen
       - name: Generate CycloneDX SBOM
         run: cdxgen . -o ./reports/bom.xml
+      - name: Viewer
         run: cat ./reports/bom.xml
       - uses: actions/upload-artifact@v1
         with:
