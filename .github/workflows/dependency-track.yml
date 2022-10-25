@@ -10,3 +10,4 @@ jobs:
         uses: AppThreat/cdxgen-action@v1.0.0
         with:
           output: "./bom.xml"
+      - run: cat ./bom.xml
