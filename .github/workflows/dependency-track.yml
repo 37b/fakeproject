@@ -1,10 +1,6 @@
 name: 'Dependency Track'
 
 on: [pull_request]
-
-defaults:
-  run:
-    working-directory: ./
     
 env:
   SCAN_DEBUG_MODE: DEBUG
@@ -12,6 +8,10 @@ env:
 jobs:
   dependency-track:
     runs-on: ubuntu-latest
+    
+    defaults:
+      run:
+        working-directory: ./fakeproject
     steps:
       - run: pip3 install poetry
       - name: cyclonedx installer
