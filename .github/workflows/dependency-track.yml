@@ -12,9 +12,9 @@ jobs:
     steps:
       - run: npm install -g @appthreat/cdxgen
       - name: Generate CycloneDX SBOM
-        run: cdxgen . -o ./reports/bom.xml
+        run: cdxgen . -o bom.xml
       - name: Viewer
-        run: cat ./reports/bom.xml
+        run: cat bom.xml
       - uses: actions/upload-artifact@v1
         with:
           name: reports
