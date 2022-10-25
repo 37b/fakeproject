@@ -2,6 +2,10 @@ name: 'Dependency Track'
 
 on: [pull_request]
 
+
+env:
+  SCAN_DEBUG_MODE: DEBUG
+
 jobs:
   dependency-track:
     runs-on: ubuntu-latest
